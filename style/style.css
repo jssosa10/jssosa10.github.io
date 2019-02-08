@@ -1,0 +1,553 @@
+* {
+    z-index: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Playfair Display;
+}
+
+body {
+    background-color: rgba(209, 209, 209, 0.38);
+    color: #393939;
+    z-index: -1;
+    margin-top: 78px;
+    font-family: Open Sans;
+    /*background-image: url("imgs/pattern.jpg");
+  background-repeat: all;*/
+}
+
+body.pre {
+    display: none;
+}
+
+p {
+    text-align: justify;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.social li {
+    margin: 1rem;
+}
+
+
+/*Animacion loader*/
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #98004a;
+    border-right: 16px solid #499800;
+    border-bottom: 16px solid #009398;
+    border-left: 16px solid #982600;
+    width: 0.75rem;
+    height: 0.75rem;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    float: left;
+    box-shadow: 0px 0px 10px black;
+    transition: opacity 0.5s;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Animacion loader adaptada de http://www.w3schools.com/howto/howto_css_loader.asp*/
+
+.feedback {
+    padding-left: 20px;
+}
+
+.icon-animation {
+    border-radius: 5px;
+    height: 5rem;
+    width: 5rem;
+    display: inline-block;
+    fill: #ededed;
+    stroke: #ededed;
+    stroke-linecap: "round";
+    stroke-width: 0px;
+    paint-order: initial;
+    transition: stroke-width 0.5s;
+}
+
+@supports (paint-order: stroke) {
+    .icon-animation:hover {
+        stroke: #ededed;
+        stroke-width: 250px;
+        stroke-linecap: "round";
+        paint-order: stroke;
+        transition: stroke-width 0.5s, fill 0.5s;
+    }
+    .icon-facebook-official:hover {
+        fill: #4267b2;
+    }
+    .icon-twitter-square:hover {
+        fill: #1da1f2;
+    }
+    .icon-github-square:hover {
+        fill: #1e2327;
+    }
+}
+
+.button-div {
+    float: left;
+    position: relative;
+    padding-left: 15px;
+}
+
+.contacto {
+    border: 2px solid #ededed;
+    background-color: #982600;
+    color: #ededed;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+}
+
+.contacto:hover {
+    box-shadow: 0px 4px 20px #370e01;
+    transition: box-shadow 0.25s;
+}
+
+.ctcto:hover {
+    background-color: #ededed;
+    color: #982600;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.nav-up {
+    top: -100px !important;
+}
+
+.navbar {
+    box-shadow: -1px 4px 20px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: -25px;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    background-color: #ededed;
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.navbar-toggle {
+    border: 1px solid #98004a;
+    background-color: #ededed;
+    margin-top: 4.5rem;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #98004a;
+}
+
+#bs-navbar-collapse {
+    overflow: hidden;
+}
+
+.section-content {
+    background-color: #98004a;
+    color: #ededed;
+    margin-bottom: 2rem;
+    box-shadow: -1px 4px 20px grey;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    transition: height 1s;
+}
+
+#home .section-content {
+    background-color: #598E47;
+}
+
+#experiencia .section-content {
+    background-color: #206B52;
+    max-height: 50%;
+    transition: height 1s ease;
+}
+
+#contacto .section-content {
+    background-color: #982600;
+}
+
+.section-title {
+    margin: 5rem;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+#home .section-title {
+    color: #598E47;
+}
+
+#experiencia .section-title {
+    color: #206B52;
+}
+
+#contacto .section-title {
+    color: #982600;
+}
+
+.subtitle {
+    padding-left: 0.3em;
+    height: 5em;
+    position: relative;
+}
+
+.logo-name {
+    float: left;
+    height: 7rem;
+    margin-top: 2rem;
+}
+
+.subtitle > small {
+    position: absolute;
+    bottom: 0;
+}
+
+.title {
+    background-color: #f0740e;
+    color: rgb(237, 237, 237);
+    margin-left: -5rem;
+    padding-right: 3rem;
+    border: 1px solid #f0740e;
+    width: 20rem;
+    padding-left: 2rem;
+    text-align: right;
+    float: left;
+    cursor: pointer;
+}
+
+.subtitle {
+    float: left;
+}
+
+.items {
+    padding-right: 0px;
+    padding-left: 15px;
+}
+
+ul.navbar-nav {
+    width: 100%;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.nav-link {
+    padding-top: 3rem;
+    text-align: center;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.nav-link a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.footer p {
+    color: rgb(237, 237, 237);
+    text-align: center;
+    font-size: 0.75em;
+    margin-bottom: 1px;
+}
+
+.footer a {
+    font-weight: bold;
+    color: #ededed;
+}
+
+.footer {
+    background-color: #f0740e;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+
+/*
+.cmn-t-underline {
+  position: relative;
+  color: black;
+}
+*/
+
+
+/*Codigo cmn-t-underline adaptado de http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation*/
+
+.cmn-t-underline:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 10px;
+    background-color: #98004a;
+    content: "";
+    transition: width 0.2s;
+}
+
+.cmn-t-underline:hover {
+    color: #98004a;
+}
+
+.cmn-t-underline:hover:after {
+    width: 100%;
+}
+
+#home_u.cmn-t-underline:after {
+    background-color: #499800;
+}
+
+#home_u.cmn-t-underline>a:hover {
+    color: #499800;
+}
+
+#experiencia_u.cmn-t-underline:after {
+    background-color: #009398;
+}
+
+#experiencia_u.cmn-t-underline>a:hover {
+    color: #009398;
+}
+
+#contacto_u.cmn-t-underline:after {
+    background-color: #982600;
+}
+
+#contacto_u.cmn-t-underline>a:hover {
+    color: #982600;
+}
+
+#myImg {
+    border: 2px solid #ededed;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-white {
+    color: white !important;
+    transition: color 0.5s;
+}
+
+
+/* Place Holder CSS for Focus adaptado de https://codepen.io/manifestinteractive/pen/viaAK*/
+
+.form-control:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.form-control:focus:-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.form-control:focus::-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.form-control:focus:-ms-input-placeholder {
+    opacity: 0;
+    -ms-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+
+/*-------*/
+
+
+/*------------- tomado de http://jsfiddle.net/F3z3V/*/
+
+::-webkit-input-placeholder {
+    transition: opacity 0.5s;
+}
+
+::-moz-placeholder {
+    transition: opacity 0.5s;
+}
+
+:-ms-input-placeholder {
+    transition: opacity 0.5s;
+}
+
+.pl-fade::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.pl-fade::-moz-placeholder {
+    opacity: 0;
+}
+
+.pl-fade:-ms-input-placeholder {
+    opacity: 0;
+}
+
+
+/*-------------*/
+
+.fade-opacity {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#mail-feedback {
+    transition: opacity 0.5s;
+}
+
+.social-icons {
+    padding-left: 0px;
+}
+
+.imgdiv {
+    padding-right: 0px;
+    padding-left: 12.5%;
+    padding-top: 25px;
+}
+
+.feedback-div {
+    float: left;
+    position: relative;
+    left: 60px;
+    vertical-align: middle;
+    top: 6.5px;
+}
+
+.loader-div {
+    float: left;
+    position: relative;
+    left: 15px;
+    top: 1px;
+    width: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.jumbo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #98004a;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.jumbo .main-title {
+    color: #ededed;
+    line-height: 160px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 215px;
+    font-size: 100px;
+    border-bottom: 2px solid #ededed;
+    z-index: -1;
+    padding-left: 24px;
+}
+
+.home-btn {
+    width: 80px;
+    margin: 30px;
+    background-color: #98004a;
+    z-index: 2;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.home-btn:hover {
+    background-color: #ededed;
+    color: #98004a;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-container {
+    margin-top: 290px;
+    text-align: center;
+}
+
+.carousel-control.no-g {
+    background-image: none;
+}
+
+.section-content.with-carousel {
+    padding-bottom: 0;
+}
+
+.section-content.in-carousel {
+    max-height: 50%;
+    box-shadow: 0px 0px 0px black;
+    transition: height 1s ease;
+}
+
+.circle-img {
+    border: 2px solid #ededed;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    display: block;
+    float: left;
+}
+
+.section-content.in-carousel h4,
+.section-content.in-carousel h3,
+.section-content.in-carousel p {
+    display: block;
+    float: left;
+}
+
+.row .monitoria {
+    padding-bottom: 15px;
+    margin-left: -10px;
+    padding-left: 0;
+}
+
+.section-content.in-carousel {
+    text-align: justify-all;
+}
+
+
+h4 {
+    font-weight: bold;
+}
